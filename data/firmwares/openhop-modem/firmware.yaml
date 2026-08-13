@@ -68,7 +68,7 @@ devices:
   - id: xiao-esp32s3
     status: supported
     target: xiao_wio_sx1262
-  - id: meshsmith-photon-1w
+  - id: meshsmith-photon-1w-esp32-c6
     status: supported
     target: photon_1w_xiao_esp32c6
   - id: lilygo-t3-s3-sx126x
