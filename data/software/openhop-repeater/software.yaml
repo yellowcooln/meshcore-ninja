@@ -1,5 +1,4 @@
-# Source: https://github.com/openhop-dev/openhop_repeater (verified 2026-07-03)
-# Source: formerly github.com/rightup/pyMC_Repeater, renamed to openhop_repeater
+# Source: https://github.com/yellowcooln/openHop_Repeater (verified 2026-08-13)
 name: openHop Repeater
 also_known_as:
   - pyMC Repeater
@@ -23,11 +22,9 @@ screenshots:
 
 maintainers:
   - name: Treehouse-00
-    url: https://github.com/Treehouse-00
   - name: openHop
-    url: https://github.com/openhop-dev
 
-repository: https://github.com/openhop-dev/openhop_repeater
+repository: https://github.com/yellowcooln/openHop_Repeater
 license: MIT
 
 languages:
@@ -57,23 +54,23 @@ capabilities:
 install:
   - type: bare-metal
     package: Python / systemd
-    url: https://github.com/openhop-dev/openhop_repeater#installation
+    url: https://github.com/yellowcooln/openHop_Repeater#installation
     command: sudo bash ./manage.sh install
   - type: docker-compose
-    url: https://github.com/openhop-dev/openhop_repeater#docker-compose
+    url: https://github.com/yellowcooln/openHop_Repeater#docker-compose
     command: docker compose up -d --force-recreate --build
   - type: proxmox-lxc
-    url: https://github.com/openhop-dev/openhop_repeater#proxmox-lxc-installation
+    url: https://github.com/yellowcooln/openHop_Repeater#proxmox-lxc-installation
   - type: source
-    url: https://github.com/openhop-dev/openhop_repeater
+    url: https://github.com/yellowcooln/openHop_Repeater
 
 popularity:
-  githubStars: 220
-  githubForks: 59
-  githubWatchers: 13
-  githubOpenIssues: 22
-  githubContributors: 22
-  lastChecked: 2026-07-03
+  githubStars: 2
+  githubForks: 0
+  githubWatchers: 0
+  githubOpenIssues: 0
+  githubContributors: 16
+  lastChecked: 2026-08-13
 
 verification:
   sourceAvailable: true
@@ -81,11 +78,11 @@ verification:
   signedReleases: false
   ciBuilds: true
   hasDocumentation: true
-  lastChecked: 2026-07-03
+  lastChecked: 2026-08-13
   notes:
     - Formerly pyMC_Repeater; renamed to openhop_repeater as part of the openHop rebrand.
     - Supports native SPI SX1262 radios, CH341 USB-to-SPI adapters, pyMC TCP/USB modems and KISS serial modems; SX1302/SX1303 concentrators are not supported.
-    - Web dashboard at http://<repeater-ip>:8000 with setup, monitoring, logs, configuration and update tools.
+    - The bundled web dashboard provides setup, monitoring, logs, configuration and update tools.
 
 tags:
   - repeater
@@ -94,4 +91,4 @@ tags:
   - kiss
   - self-hosted
 
-last_reviewed: 2026-07-03
+last_reviewed: 2026-08-13
