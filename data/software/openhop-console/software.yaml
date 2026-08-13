@@ -1,4 +1,6 @@
-name: pyMC Console
+name: openHop Console
+also_known_as:
+  - pyMC Console
 kind: monitoring
 status: active
 maturity: beta
@@ -7,7 +9,7 @@ description: >-
   path analysis, RF statistics, terrain mapping, link-quality radar, system
   monitoring and an interactive repeater terminal.
 
-image: logo.svg
+image: openhop-logo.svg
 screenshots:
   - file: topology.png
     caption: Deep topology analysis and terrain mapping
@@ -19,24 +21,18 @@ screenshots:
     caption: Repeater terminal, logs and themes
 
 maintainers:
-  - name: Treehouse-00
-    url: https://github.com/Treehouse-00
-  # Source: repo transferred from dmduran12 to Treehouse-00
-  - name: openHop
+  - name: openhop-dev
     url: https://github.com/openhop-dev
 
-# Source: repo transferred from dmduran12/pymc_console-dist to Treehouse-00/pymc_console-dist
-repository: https://github.com/Treehouse-00/pymc_console-dist
-documentation: https://docs.pymc.dev/
+# Source: https://github.com/openhop-dev/openHop_RepeaterUI (verified 2026-08-13)
+repository: https://github.com/openhop-dev/openHop_RepeaterUI
+documentation: https://openhop.dev/
 license: MIT
 
 languages:
   - javascript
   - typescript
   - shell
-
-latest_version: v0.9.329
-released: 2026-05-07
 
 platforms:
   - linux
@@ -58,28 +54,15 @@ capabilities:
   - mapping
 
 install:
-  - type: github-release
-    package: pymc-ui-latest.tar.gz
-    url: https://github.com/Treehouse-00/pymc_console-dist/releases
   - type: manual
-    url: https://github.com/Treehouse-00/pymc_console-dist#install-the-console
+    url: https://github.com/openhop-dev/openHop_RepeaterUI#install-the-console
     command: sudo bash manage.sh install
   - type: source
-    url: https://github.com/Treehouse-00/pymc_console-dist
-
-popularity:
-  githubStars: 54
-  githubForks: 8
-  githubWatchers: 3
-  githubOpenIssues: 16
-  githubContributors: 3
-  releaseDownloads: 2609
-  latestReleaseDownloads: 535
-  lastChecked: 2026-07-03
+    url: https://github.com/openhop-dev/openHop_RepeaterUI
 
 verification:
   sourceAvailable: true
-  releasesAvailable: true
+  releasesAvailable: false
   signedReleases: false
   ciBuilds: true
   hasDocumentation: true
@@ -87,7 +70,7 @@ verification:
   notes:
     - "Requires an existing openHop Repeater installation and replaces only its web dashboard assets."
     - "Repeater service lifecycle and radio configuration remain owned by openHop Repeater."
-    - "Repo transferred from dmduran12 to Treehouse-00; still named pyMC Console."
+    - "Formerly pyMC Console; the current openHop project repository is openHop_RepeaterUI."
 
 tags:
   - repeater

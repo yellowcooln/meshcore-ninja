@@ -1,4 +1,4 @@
-# Source: https://github.com/yellowcooln/openHop_Repeater (verified 2026-08-13)
+# Source: https://github.com/openhop-dev/openhop_repeater (verified 2026-08-13)
 name: openHop Repeater
 also_known_as:
   - pyMC Repeater
@@ -11,9 +11,9 @@ description: >-
   CH341 USB-to-SPI adapters, pyMC TCP/USB modems and KISS serial modems.
   Forwards LoRa packets, exposes a web dashboard, and provides configuration
   tools for radio setup, policy management, monitoring and integrations.
-  Server for [[software:pymc-console|pyMC Console]].
+  Server for [[software:openhop-console|openHop Console]].
 
-image: logo.png
+image: openhop-logo.svg
 screenshots:
   - file: dashboard.png
     caption: Repeater status and packet monitoring dashboard
@@ -21,10 +21,10 @@ screenshots:
     caption: Repeater traffic and performance statistics
 
 maintainers:
-  - name: Treehouse-00
-  - name: openHop
+  - name: openhop-dev
+    url: https://github.com/openhop-dev
 
-repository: https://github.com/yellowcooln/openHop_Repeater
+repository: https://github.com/openhop-dev/openhop_repeater
 license: MIT
 
 languages:
@@ -54,23 +54,15 @@ capabilities:
 install:
   - type: bare-metal
     package: Python / systemd
-    url: https://github.com/yellowcooln/openHop_Repeater#installation
+    url: https://github.com/openhop-dev/openhop_repeater#installation
     command: sudo bash ./manage.sh install
   - type: docker-compose
-    url: https://github.com/yellowcooln/openHop_Repeater#docker-compose
+    url: https://github.com/openhop-dev/openhop_repeater#docker-compose
     command: docker compose up -d --force-recreate --build
   - type: proxmox-lxc
-    url: https://github.com/yellowcooln/openHop_Repeater#proxmox-lxc-installation
+    url: https://github.com/openhop-dev/openhop_repeater#proxmox-lxc-installation
   - type: source
-    url: https://github.com/yellowcooln/openHop_Repeater
-
-popularity:
-  githubStars: 2
-  githubForks: 0
-  githubWatchers: 0
-  githubOpenIssues: 0
-  githubContributors: 16
-  lastChecked: 2026-08-13
+    url: https://github.com/openhop-dev/openhop_repeater
 
 verification:
   sourceAvailable: true

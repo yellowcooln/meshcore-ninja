@@ -12,10 +12,10 @@ description: >-
   event handling and optional direct SX1262 radio support over SPI. Compatible
   with the original MeshCore protocol. Available on PyPI as pymc-core.
 
-image: pymc.png
+image: openhop-logo.svg
 
 maintainers:
-  - name: openHop
+  - name: openhop-dev
     url: https://github.com/openhop-dev
 
 repository: https://github.com/openhop-dev/openhop_core
@@ -62,14 +62,6 @@ install:
     command: pip install "pymc-core[hardware]"
   - type: source
     url: https://github.com/openhop-dev/openhop_core
-
-popularity:
-  githubStars: 82
-  githubForks: 34
-  githubWatchers: 6
-  githubOpenIssues: 7
-  githubContributors: 10
-  lastChecked: 2026-07-03
 
 verification:
   sourceAvailable: true
