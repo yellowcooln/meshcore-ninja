@@ -18,8 +18,7 @@ image: photon-1w.svg
 roles:
   - kiss-modem
 transports:
-  - usb
-  - tcp
+  - ble
   - wifi
 variants:
   - name: 915 MHz

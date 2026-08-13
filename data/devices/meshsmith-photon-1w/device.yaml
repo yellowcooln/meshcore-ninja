@@ -21,7 +21,6 @@ roles:
   - room-server
 transports:
   - ble
-  - usb
 variants:
   - name: 915 MHz
     bands:
