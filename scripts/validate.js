@@ -189,11 +189,28 @@ for (const f of firmwares) {
   }
 }
 
-// Every `refs` key must name a ref database registered in globals.refs.
-for (const r of [...vendors, ...devices, ...firmwares, ...networks, ...software]) {
+// External-reference maps use keys registered in globals.refs. Software `refs`
+// are instead internal catalog relationships defined by schema/software.yaml.
+for (const r of [...vendors, ...devices, ...firmwares, ...networks]) {
   for (const key of Object.keys(r.data.refs ?? {})) {
     if (!refIds.has(key)) {
       err(r.where, `refs key "${key}" is not defined in data/globals.yaml refs`);
+    }
+  }
+}
+
+const internalCollections = {
+  devices: new Set(devices.map((r) => r.id)),
+  firmwares: new Set(firmwares.map((r) => r.id)),
+  networks: new Set(networks.map((r) => r.id)),
+  software: new Set(software.map((r) => r.id))
+};
+for (const r of software) {
+  for (const [collection, ids] of Object.entries(r.data.refs ?? {})) {
+    for (const id of ids) {
+      if (!internalCollections[collection]?.has(id)) {
+        err(r.where, `refs.${collection} id "${id}" has no data/${collection}/ entry`);
+      }
     }
   }
 }

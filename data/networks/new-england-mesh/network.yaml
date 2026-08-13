@@ -26,6 +26,8 @@ community:
 maps:
   - name: NHMesh Live
     url: https://nhmesh.live
+  - name: New England MeshCore Live Map
+    url: https://map.newenglandme.sh/
 
 analyzers:
   # Source: community website scan 2026-06-26 — CoreScope at analyzer.newenglandme.sh (1,017 nodes, New England)
@@ -35,5 +37,7 @@ analyzers:
 resources:
   getting_started: https://nhmesh.com/guides
   links:
+    - name: New England MeshCore Health Check
+      url: https://healthcheck.newenglandme.sh/
     - name: Channel setup guide
       url: https://nhmesh.com/guides/channel-setup

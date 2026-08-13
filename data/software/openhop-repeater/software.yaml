@@ -84,6 +84,23 @@ verification:
     - Supports native SPI SX1262 radios, CH341 USB-to-SPI adapters, pyMC TCP/USB modems and KISS serial modems; SX1302/SX1303 concentrators are not supported.
     - The bundled web dashboard provides setup, monitoring, logs, configuration and update tools.
 
+refs:
+  devices:
+    - heltec-v3
+    - heltec-v4
+    - heltec-wt2
+    - ikoka-stick
+    - xiao-esp32s3
+    - meshsmith-photon-1w
+    - lilygo-t3-s3-sx126x
+    - lilygo-tbeam-supreme
+    - rak-3112
+    - station-g2
+    - meshsmith-ethermesh-1w
+    - heltec-t114
+    - rak-4631
+    - xiao-nrf52
+
 tags:
   - repeater
   - raspberry-pi
