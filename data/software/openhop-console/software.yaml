@@ -21,12 +21,12 @@ screenshots:
     caption: Repeater terminal, logs and themes
 
 maintainers:
-  - name: openhop-dev
-    url: https://github.com/openhop-dev
+  - name: Treehouse-00
+    url: https://github.com/Treehouse-00
 
-# Source: https://github.com/openhop-dev/openHop_RepeaterUI (verified 2026-08-13)
-repository: https://github.com/openhop-dev/openHop_RepeaterUI
-documentation: https://openhop.dev/
+# Source: https://github.com/Treehouse-00/pymc_console (verified 2026-08-13)
+repository: https://github.com/Treehouse-00/pymc_console
+documentation: https://github.com/Treehouse-00/pymc_console#readme
 license: MIT
 
 languages:
@@ -54,15 +54,18 @@ capabilities:
   - mapping
 
 install:
+  - type: github-release
+    package: pymc-ui-latest.tar.gz
+    url: https://github.com/Treehouse-00/pymc_console-dist/releases
   - type: manual
-    url: https://github.com/openhop-dev/openHop_RepeaterUI#install-the-console
+    url: https://github.com/Treehouse-00/pymc_console-dist#install
     command: sudo bash manage.sh install
   - type: source
-    url: https://github.com/openhop-dev/openHop_RepeaterUI
+    url: https://github.com/Treehouse-00/pymc_console
 
 verification:
   sourceAvailable: true
-  releasesAvailable: false
+  releasesAvailable: true
   signedReleases: false
   ciBuilds: true
   hasDocumentation: true
@@ -70,7 +73,8 @@ verification:
   notes:
     - "Requires an existing openHop Repeater installation and replaces only its web dashboard assets."
     - "Repeater service lifecycle and radio configuration remain owned by openHop Repeater."
-    - "Formerly pyMC Console; the current openHop project repository is openHop_RepeaterUI."
+    - "Developed and maintained by Treehouse-00 as the Console application for openHop Repeater."
+    - "Source lives in Treehouse-00/pymc_console; installable release assets are published from Treehouse-00/pymc_console-dist."
 
 tags:
   - repeater
