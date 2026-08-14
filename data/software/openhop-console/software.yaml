@@ -27,6 +27,9 @@ maintainers:
 # Source: https://github.com/Treehouse-00/pymc_console (verified 2026-08-13)
 repository: https://github.com/Treehouse-00/pymc_console
 documentation: https://github.com/Treehouse-00/pymc_console#readme
+changelog:
+  source: github
+  repo: Treehouse-00/pymc_console-dist
 license: MIT
 
 languages:

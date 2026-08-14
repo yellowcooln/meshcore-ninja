@@ -11,6 +11,9 @@ description: >-
   DFU update paths where the target hardware supports them.
 repository: https://github.com/openhop-dev/openhop_modem
 website: https://flasher.openhop.dev/
+changelog:
+  source: github
+  repo: openhop-dev/openhop_modem
 license: MIT
 status: active
 scope: function-specific
@@ -21,8 +24,6 @@ distribution: community
 runtime:
   framework: arduino
   language: C++
-latest_version: v1.0.1
-released: 2026-07-23
 roles:
   - kiss-modem
 features:

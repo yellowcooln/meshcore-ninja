@@ -165,27 +165,33 @@ if (existsSync(globalsPath)) {
 }
 const refIds = new Set(Object.keys(globalsData?.refs ?? {}));
 
-// Optional changelog.yaml alongside each firmware.
-for (const f of firmwares) {
-  const path = join(root, 'data', 'firmwares', f.id, 'changelog.yaml');
-  if (!existsSync(path)) continue;
-  let cl;
-  try {
-    cl = load(readFileSync(path, 'utf8'));
-  } catch (e) {
-    err(`firmwares/${f.id}/changelog`, `YAML parse error: ${e.message}`);
-    continue;
-  }
-  if (!changelogSchema(cl)) {
-    for (const e of changelogSchema.errors) {
-      err(`firmwares/${f.id}/changelog`, `${e.instancePath || '/'} ${e.message}`);
+// Optional changelog.yaml alongside each firmware or software record.
+for (const [kind, records] of [
+  ['firmwares', firmwares],
+  ['software', software]
+]) {
+  for (const f of records) {
+    const path = join(root, 'data', kind, f.id, 'changelog.yaml');
+    if (!existsSync(path)) continue;
+    let cl;
+    try {
+      cl = load(readFileSync(path, 'utf8'));
+    } catch (e) {
+      err(`${kind}/${f.id}/changelog`, `YAML parse error: ${e.message}`);
+      continue;
     }
-  }
-  if (f.data.latest_version) {
-    err(f.where, 'latest_version must not be set when changelog.yaml exists — it is computed at build time');
-  }
-  if (f.data.released) {
-    err(f.where, 'released must not be set when changelog.yaml exists — it is computed at build time');
+    if (!changelogSchema(cl)) {
+      for (const e of changelogSchema.errors) {
+        err(`${kind}/${f.id}/changelog`, `${e.instancePath || '/'} ${e.message}`);
+      }
+    }
+    const derivesVersion = kind === 'firmwares' || f.data.changelog;
+    if (derivesVersion && f.data.latest_version) {
+      err(f.where, 'latest_version must not be set with configured changelog automation — it is computed at build time');
+    }
+    if (derivesVersion && f.data.released) {
+      err(f.where, 'released must not be set with configured changelog automation — it is computed at build time');
+    }
   }
 }
 

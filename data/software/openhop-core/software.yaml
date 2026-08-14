@@ -21,12 +21,13 @@ maintainers:
 
 repository: https://github.com/openhop-dev/openhop_core
 documentation: https://openhop-dev.github.io/openhop_core/
+changelog:
+  source: script
+  script: fetch-changelog.js
 license: MIT
 
 languages:
   - python
-
-latest_version: 1.1.1
 
 platforms:
   - linux
