@@ -56,9 +56,14 @@ install:
     package: Python / systemd
     url: https://github.com/openhop-dev/openhop_repeater#installation
     command: sudo bash ./manage.sh install
+  - type: docker
+    package: openhop/openhop-repeater:main
+    url: https://hub.docker.com/r/openhop/openhop-repeater
+    command: docker pull openhop/openhop-repeater:main
   - type: docker-compose
+    package: openhop/openhop-repeater:main
     url: https://github.com/openhop-dev/openhop_repeater#docker-compose
-    command: docker compose up -d --force-recreate --build
+    command: docker compose up -d
   - type: proxmox-lxc
     url: https://github.com/openhop-dev/openhop_repeater#proxmox-lxc-installation
   - type: source
