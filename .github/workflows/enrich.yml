@@ -11,9 +11,7 @@ permissions:
   actions: write
 
 concurrency:
-  # Both scheduled data writers push to main; serialize them to avoid
-  # non-fast-forward races when schedules or manual runs overlap.
-  group: catalog-data-writers
+  group: enrich
   cancel-in-progress: false
 
 jobs:
