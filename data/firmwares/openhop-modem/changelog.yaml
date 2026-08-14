@@ -1,7 +1,23 @@
 source: github
 repo: openhop-dev/openhop_modem
-updatedAt: '2026-08-14T00:13:31.615Z'
+updatedAt: '2026-08-14T22:31:02.346Z'
 releases:
+  - version: issue-52-test-pr53-0983db2
+    name: 'Experimental issue #52 test build (PR #53)'
+    datetime: '2026-08-14T21:39:46Z'
+    url: https://github.com/openhop-dev/openhop_modem/releases/tag/issue-52-test-pr53-0983db2
+    prerelease: true
+    notes: >-
+      Experimental test firmware for openhop-dev/openhop_modem issue #52 and draft PR #53.
+
+
+      Board: XIAO ESP32-S3 + Wio-SX1262
+
+      Source commit: 0983db2b0230e543c16be35c19f5b6b225892e7d
+
+
+      This is an application/OTA test build only, not a normal firmware release. Keep USB recovery
+      available.
   - version: v1.0.1
     name: v1.0.1 - Factory Images, Release Packages, and Radio Reliability Improvements
     datetime: '2026-07-23T00:23:58Z'
